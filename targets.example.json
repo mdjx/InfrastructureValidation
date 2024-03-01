@@ -1,0 +1,26 @@
+{
+    "Ping": [
+        "1.1.1.1",
+        "8.8.8.8",
+        "google.com"
+    ],
+    "TCP": [
+        {
+            "Target": "google.com",
+            "Port": [80,443]
+        },
+        {
+            "Target": "xkln.net",
+            "Port": [80,443]
+        }
+    ],
+    "DNS": {
+        "Server": "1.1.1.1",
+        "Targets": [
+            {
+                "Target": "one.one.one.one",
+                "ShouldResolveTo": "1.1.1.1"
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+# Ignore all json files
+*.json
+
+# Except the example
+!targets.example.json
+
