@@ -12,7 +12,7 @@ Clone the repository, define your own json file or rename `targets.example.json`
 
 You can run `Run.ps1` without any parameters, or you can specify a custom json file with the `-TargetsFile` param. When one isn't specified the default it looks for is `targets.json`.
 
-Example
+### Example
 
 ```powershell
 PS C:\Code\InfrastructureValidation> .\Run.ps1 
