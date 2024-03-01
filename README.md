@@ -2,15 +2,19 @@
 
 This small script allows various infrastructure targets to be defined in a json file which Pester will use to run connectivity tests against and return results. 
 
-Supported types of connectivity tests include Pings, TCP ports, and DNS A records, though adding your own types is straight forward. 
+Supported types of connectivity tests include ping, TCP ports, and DNS A record validation, though adding your own types is straight forward. 
+
+I've used this when making infrastructure or system changes (such as switch or router upgrades) as a fast way to validate the changes and ensure all services and systems are reachable.
 
 ## Usage
 
-Clone the repository, define your own json file or rename `targets.example.json` to `targets.json`, and execute Run.ps1.
+Clone the repository, define your own json file or rename `targets.example.json` to `targets.json`, and execute Run.ps1. This will run all tests every 10 seconds.
 
 Example
 
 ```powershell
+PS C:\Code\InfrastructureValidation> .\Run.ps1 
+
 Starting discovery in 1 files.
 Discovering in C:\Code\InfrastructureValidation\Connectivity.Tests.ps1.
 Found 8 tests. 5ms
