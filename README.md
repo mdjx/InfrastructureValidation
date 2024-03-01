@@ -10,6 +10,8 @@ I've used this when making infrastructure or system changes (such as switch or r
 
 Clone the repository, define your own json file or rename `targets.example.json` to `targets.json`, and execute Run.ps1. This will run all tests every 10 seconds.
 
+You can run `Run.ps1` without any parameters, or you can specify a custom json file with the `-TargetsFile` param. When one isn't specified the default it looks for is `targets.json`.
+
 Example
 
 ```powershell
