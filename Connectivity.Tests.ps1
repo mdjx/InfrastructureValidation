@@ -30,7 +30,7 @@ if ($Targets.TCP.Count -gt 0) {
 if ($Targets.DNS.Targets.Count -gt 0) {
     Describe "DNS" {
         It "Resolves DNS for <_.Target>" -ForEach $Targets.DNS.Targets {
-        (Resolve-DnsName -Type A -Name $_.Target -Server $Targets.DNS.Server).IPAddress | Should -Be $_.ShouldResolveTo
+        (Resolve-DnsName -Type A -Name $_.Target -DnsOnly -Server $Targets.DNS.Server).IPAddress | Should -Be $_.ShouldResolveTo
         }
     }
 }
