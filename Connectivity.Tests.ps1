@@ -22,7 +22,6 @@ if ($Targets.TCP.Count -gt 0) {
                 $Result = (New-Object System.Net.Sockets.TcpClient).ConnectAsync($IP, $Port).Wait(150)
                 $Result | Should -Be $true
             }
-        
     }
 }
 
