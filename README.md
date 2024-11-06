@@ -40,3 +40,13 @@ Describing DNS
 Tests completed in 420ms
 Tests Passed: 8, Failed: 0, Skipped: 0 NotRun: 0
 ```
+
+# Requirements
+
+Pester v5 is required. See https://pester.dev/docs/introduction/installation
+
+## Windows TL;DR
+
+```powershell
+Install-Module -Name Pester -Force -SkipPublisherCheck -Scope CurrentUser
+```

@@ -1,4 +1,5 @@
-﻿param($TargetsFile = "targets.json")
+﻿#Requires -Modules @{ ModuleName="Pester"; ModuleVersion="5.0.0" }
+param($TargetsFile = "targets.json")
 
 $HR = [System.Environment]::NewLine + "─"*100 + [System.Environment]::NewLine*2
 $PesterContainer = New-PesterContainer -Path "." -Data @{ TargetsFile=$TargetsFile}
