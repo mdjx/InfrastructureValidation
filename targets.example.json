@@ -1,17 +1,18 @@
 {
     "Ping": [
         "1.1.1.1",
-        "8.8.8.8",
+        { "Target": "8.8.8.8", "Label": "Google DNS" },
         "google.com"
     ],
     "TCP": [
         {
             "Target": "xkln.net",
-            "Port": [80,443]
+            "Label": "Blog",
+            "Port": [80, 443]
         },
         {
             "Target": "google.com",
-            "Port": [81,443]
+            "Port": [81, 443]
         }
     ],
     "DNS": {
@@ -19,7 +20,8 @@
         "Targets": [
             {
                 "Target": "resolver1.opendns.com",
-                "ShouldResolveTo": "208.67.222.222"
+                "ShouldResolveTo": "208.67.222.222",
+                "Label": "OpenDNS Resolver"
             }
         ]
     }
