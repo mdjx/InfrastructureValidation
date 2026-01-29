@@ -19,7 +19,8 @@ if ($Targets.TCP.Count -gt 0) {
         $Bindings = $Targets.TCP | % {$Dest = $_.Target; $_.Port | % {"$($Dest):$_"}}
             It "Tests TCP for <_>" -ForEach $Bindings {
                 $IP, $Port = $_.Split(":")
-                $Result = (New-Object System.Net.Sockets.TcpClient).ConnectAsync($IP, $Port).Wait(150)
+                $TcpClient = New-Object System.Net.Sockets.TcpClient
+                try {$Result = $TcpClient.ConnectAsync($IP, $Port).Wait(150)} finally {$TcpClient.Close()}
                 $Result | Should -Be $true
             }
     }
